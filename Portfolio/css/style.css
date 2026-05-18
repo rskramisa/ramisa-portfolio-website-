@@ -1,0 +1,313 @@
+:root {
+    --text-color:#F1ECE7;
+    --link-color:#8b1d2c;
+    --background-color:#0b0b0f;
+
+    /*-- means creating a custom variable */
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h2{
+    color:var(--text-color);
+}
+
+/*root,html,* all target the page altogether */
+
+body{
+    background-color: var(--background-color);
+    max-width:1400px; /*will only allow the brower to zoom out upto this much*/
+    margin: 0 ; 
+    min-height:100vh; /*the body will at least cover the whole screen, even if the content is small.*/
+
+    background: /*This is shorthand for all background layers. CSS allows you to stack multiple backgrounds on top of each other, separated by commas.*/
+    radial-gradient(900px circle at 20% 30%, rgba(40,80,255,0.12), transparent),
+    radial-gradient(900px circle at 80% 40%, rgba(255,40,80,0.10), transparent),
+    #050507;
+}
+
+main{
+    max-width:1400px;
+    margin:0 auto;
+}
+
+/*styling links*/
+a{
+    color:var(--link-color);
+    text-decoration: none;
+}
+
+/*NAVBAR */
+nav{
+    display:flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 50px; 
+    height:70px;
+
+    position: sticky;
+    top:0;
+    z-index:100;
+
+    backdrop-filter: blur(12px);
+    background: rgba(10,10,15,0.45); 
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+ 
+}
+
+
+/*LEFT SIDE: RAMISA SUJANA */
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+nav .left a:hover, 
+nav .left a:focus-visible {
+    color: var(--link-color);
+}
+
+
+/*MIDDLE PART ITEMS ONLY*/
+nav .middle ul {
+    display: flex;
+    list-style: none; /* Removes bullet points */
+    gap: 20px;       /* Adds equal spacing between your links */
+    padding: 0;
+    margin: 0;
+}
+
+/*MIDDLE PART LINKS ONLY*/
+nav .middle a{
+    color:var(--text-color);
+    font-weight:bold;
+    font-size: 18px;
+
+}
+
+/*MIDDLE PART LINKS: COLOUR CHANGE ON HOVER*/
+nav .middle a:hover, 
+nav .middle a:focus-visible {
+    color: var(--link-color);
+}
+
+/*RIGHT SIDE: GENERAL*/
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*RIGHT SIDE: ONLY ICONS */
+nav .right a{
+    color: var(--text-color);
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+/*RIGHT SIDE ICONS: COLOUR CHANGE ON HOVER*/
+nav .right a:hover,
+nav .right a:focus-visible{
+    color:var(--link-color)
+}
+
+/*ONLY VIEW RESUME*/
+nav .right a:first-child{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/*VIEW RESUME: COLOUR CHANGE ON HOVER*/
+nav .right a:first-child:hover,
+nav .right a:first-child:focus-visible{
+    color: var(--link-color);
+}
+
+/* SECTION 1: HOME */
+.home-section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 40px 0;
+    gap:40px;
+    margin-bottom: 100px;
+    color:var(--text-color);
+}
+
+/*Targets the intro text*/
+.home-section .text{
+    flex: 5;
+}
+
+/* Adds space bewteen h2 and p*/
+.home-section .text h2 + p {
+  margin-top: 20px;
+}
+
+/*Target the picture class*/
+.home-section .Mypic{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+/*Targets the picture itself*/
+.home-section .Mypic img{
+    border-radius: 10px;
+    width: 270px;
+}
+
+/* SECTION 2: ABOUT */
+.about-section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 40px 0;
+    gap:40px;
+    margin-bottom: 100px;
+    color:var(--text-color);
+}
+
+.about-section .text a{
+    color: #e66c39;
+}
+
+
+/* Adds space bewteen h2 and p*/
+.about-section .text h2 + p {
+  margin-top: 20px;
+}
+
+.about-section .text p{
+    margin-bottom: 20px;
+}
+
+/* SECTION 3: SKILLS */
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2{
+    margin-bottom: 20px;
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width:200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #475569;
+    border-radius: 5px;
+}
+
+.skills-section .cells .cell img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span{
+    font-size: 16px;
+    color:var(--text-color);
+}
+
+/* SECTION 4: PROJECTS */
+.projects-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.projects-section h2{
+    margin-bottom: 20px;
+}
+
+/*Responsive-ness: NAVBAR*/
+/* Tablet: hide "View Resume" text */
+@media (max-width: 800px) {
+    .resume-text {
+        display: none;
+    }
+
+    nav .right a:first-child {
+        padding: 6px;
+        color:var(--text-color);
+        background-color: var(--background-color);
+    }
+}
+
+/* Mobile: hide middle nav */
+@media (max-width: 600px) {
+    nav .middle {
+        display: none;
+    }
+}
+
+/* SECTION 3: SKILLS */
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+    h2{
+        margin-bottom: 20px;
+    }
+}
+
+/*Responsive-ness: HOME*/
+@media (max-width: 850px){
+    .home .text h2{
+        font-size: 25px;
+    }
+    .home .text p{
+        font-size:20px;
+    }
+    .home .text h1{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 360px){
+    .home {
+        flex-direction: column-reverse;
+    }
+
+    .home .Mypic img{
+        width: 300px;
+    }
+}
+
+/*Responsive-ness: SKILLS*/
+@media (max-width: 600px){
+    .skills-section{
+        padding:0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
+    }
+}
