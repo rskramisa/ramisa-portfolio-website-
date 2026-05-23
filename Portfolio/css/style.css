@@ -16,7 +16,7 @@ html{
     scroll-behavior: smooth;
 }
 
-h2{
+h2, h3{
     color:var(--text-color);
 }
 
@@ -238,15 +238,98 @@ nav .right a:first-child:focus-visible{
     color:var(--text-color);
 }
 
-/* SECTION 4: PROJECTS */
-.projects-section{
+/* PROJECT */
+.projects-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.projects-section h2{
-    margin-bottom: 20px;
+.projects-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--text-color, #f3f4f6);
 }
+
+/* 1. The Grid Container */
+.projects-grid {
+    display: grid;
+    /* This creates 2 columns on desktop, and automatically drops to 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* 2. The Individual Card styling */
+.project-card {
+    background-color: #12141c; /* Dark slate card background */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Ultra-thin subtle border */
+    border-radius: 8px;
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes tags to the exact bottom */
+    transition: border-color 0.2s ease;
+}
+
+/* Subtle hover effect from the reference image */
+.project-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* 3. Card Header (Title + Icons alignment) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.card-header h3 {
+    font-family: 'Times New Roman', Times, serif; /* Editorial serif font style */
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #f3f4f6; 
+}
+
+.card-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.card-links a {
+    color: #57657a;
+    transition: color 0.2s ease;
+}
+
+.card-links a:hover {
+    color: var(--link-color);
+}
+
+/* 4. Card Description */
+.card-description {
+    color: #8fa0b5; /* Light grayish-blue for readability */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem; /* Large bottom margin pushes the tags down uniformly */
+}
+
+/* 5. Tag Pills styling */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.card-tags .tag {
+    background-color: #1a1d29; /* Slightly darker fill for pills */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    color: #7b869a;
+    font-family: monospace; /* Gives it a clean code-token look */
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px; /* Makes them pill-shaped */
+}
+
 
 /*Responsive-ness: NAVBAR*/
 /* Tablet: hide "View Resume" text */
@@ -309,5 +392,15 @@ nav .right a:first-child:focus-visible{
 
     .skills-section .cells .cell span {
         font-size: 16px;
+    }
+}
+
+/*Responsiveness: PROJECTS*/
+@media (max-width: 500px) {
+    .projects-section {
+        padding: 0 20px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Force single column on tiny screens */
     }
 }
