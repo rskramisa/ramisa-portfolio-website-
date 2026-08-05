@@ -16,6 +16,13 @@ html{
     scroll-behavior: smooth;
 }
 
+.home-section,
+.about-section,
+.skills-section,
+.projects-section {
+    scroll-margin-top: 80px;
+}
+
 h2, h3{
     color:var(--text-color);
 }
@@ -352,34 +359,27 @@ nav .right a:first-child:focus-visible{
     }
 }
 
-/* SECTION 3: SKILLS */
-.skills-section{
-    padding: 0 50px;
-    margin-bottom: 100px;
-    h2{
-        margin-bottom: 20px;
-    }
-}
-
 /*Responsive-ness: HOME*/
 @media (max-width: 850px){
-    .home .text h2{
+    .home-section .text h2{
         font-size: 25px;
     }
-    .home .text p{
-        font-size:20px;
+
+    .home-section .text p{
+        font-size: 20px;
     }
-    .home .text h1{
+
+    .home-section .text h1{
         font-size: 28px;
     }
 }
 
 @media (max-width: 360px){
-    .home {
+    .home-section {
         flex-direction: column-reverse;
     }
 
-    .home .Mypic img{
+    .home-section .Mypic img{
         width: 300px;
     }
 }
