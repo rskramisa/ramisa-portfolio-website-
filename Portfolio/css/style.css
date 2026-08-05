@@ -35,7 +35,7 @@ body{
     margin: 0 ; 
     min-height:100vh; /*the body will at least cover the whole screen, even if the content is small.*/
 
-    background: /*This is shorthand for all background layers. CSS allows you to stack multiple backgrounds on top of each other, separated by commas.*/
+    background: /*This is shorthand for all background layers. In CSS you can stack multiple backgrounds on top of each other, separated by commas.*/
     radial-gradient(900px circle at 20% 30%, rgba(40,80,255,0.12), transparent),
     radial-gradient(900px circle at 80% 40%, rgba(255,40,80,0.10), transparent),
     #050507;
@@ -89,7 +89,7 @@ nav .left a:focus-visible {
 nav .middle ul {
     display: flex;
     list-style: none; /* Removes bullet points */
-    gap: 20px;       /* Adds equal spacing between your links */
+    gap: 20px;       /* Adds equal spacing between links */
     padding: 0;
     margin: 0;
 }
@@ -194,7 +194,6 @@ nav .right a:first-child:focus-visible{
     color: #e66c39;
 }
 
-
 /* Adds space bewteen h2 and p*/
 .about-section .text h2 + p {
   margin-top: 20px;
@@ -253,7 +252,7 @@ nav .right a:first-child:focus-visible{
 
 .projects-section h2 {
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--text-color, #f3f4f6);
 }
 
@@ -283,7 +282,7 @@ nav .right a:first-child:focus-visible{
     border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* 3. Card Header (Title + Icons alignment) */
+/* 3. Card Header */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -292,7 +291,7 @@ nav .right a:first-child:focus-visible{
 }
 
 .card-header h3 {
-    font-family: 'Times New Roman', Times, serif; /* Editorial serif font style */
+    font-family: 'Times New Roman', Times, serif; 
     font-size: 1.75rem;
     font-weight: 400;
     color: #f3f4f6; 
